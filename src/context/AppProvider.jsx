@@ -5,10 +5,10 @@ export const AppContext = React.createContext();
 export default function AppProvider(props) {
   const [pickType, setPickType] = useState("");
   const [showType, setShowType] = useState();
-
-  const [pokemonsList, setPokemonsList] = useState([]);
-  const [pokemonName, setPokemonName] = useState("");
   const [pokemonInfo, setPokemonInfo] = useState({});
+
+  const [pokemonsList, setPokemonsList] = useState([]); // probablemente estos estados 
+  const [pokemonName, setPokemonName] = useState(""); // no son necesarios
 
   return (
     <AppContext.Provider

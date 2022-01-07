@@ -7,10 +7,10 @@ export default function PokemonList() {
 
   const searchName = async (name) => {
     const resultado = await getPokemonInfo(name);
-    console.log('Resultados', resultado);
+    // console.log('Resultados', resultado);
     context.setPokemonName(resultado);
+    context.setPokemonInfo(resultado);
   }
-
 
   return (
     <div className="poke-nav-list">
@@ -19,8 +19,8 @@ export default function PokemonList() {
         {context.showType?.pokemon?.map((data) => {
           return (
             <>
-              <li className="poke-list-style" onClick={() => searchName(data.pokemon.name)} key={data.pokemon.id}>
-                {data.pokemon.name}
+              <li className="poke-list-style" key={data.pokemon.id}>
+                <button type="button" onClick={() => searchName(data.pokemon.name)} >{data.pokemon.name}</button>
               </li>
             </>
           );

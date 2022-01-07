@@ -10,7 +10,6 @@ export default function Header() {
   const context = useContext(AppContext);
 
   const selectType = async (tipo) => {
-    // context.setpickType(tipo, true);
     const resultado = await getPokemonType(tipo);
     console.log('Resultados', resultado);
     context.setShowType(resultado);
