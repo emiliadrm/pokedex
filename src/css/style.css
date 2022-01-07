@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", Courier, monospace;
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+
+header {
+  height: 170px;
+  flex: 0 0 auto;
+  background: url(https://vignette.wikia.nocookie.net/pokemonzetaomicron/images/8/8f/Onega_Town.png/revision/latest?cb=20140423131057);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: -3px 0 0 #235597, 3px 0 0 #235597, 0 -3px 0 #235597,
+    0 3px 0 #235597;
+}
+link {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+.pokemon-picker {
+  display: flex;
+}
+
+.container.red {
+  background: red;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* Header */
+.color-picker {
+  margin-top: 10px;
+}
+
+.color-picker button {
+  background: transparent;
+  border: 2px solid transparent;
+  border-radius: 50px;
+  cursor: pointer;
+  margin-right: 5px;
+  outline: none;
+  padding: 0;
+}
+/* bolitas del heather */
+.PokeBall {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.PokeBall {
+  display: flex;
+  align-items: center;
+}
+
+.red {
+  width: 30px;
+}
+
+.App {
+  font-family: "Roboto";
+  text-align: center;
+}
+h1 {
+  color: #f7c509;
+  font-family: Fjalla One;
+  font-weight: bold;
+  font-size: 35px;
+  letter-spacing: 7px;
+  text-transform: uppercase;
+  text-shadow: -3px 0 0 #235597, 3px 0 0 #235597, 0 -3px 0 #235597,
+    0 3px 0 #235597, 0 0 5px #000;
+  margin: 0;
+  padding: 0;
+}
+
+header h1 a {
+  color: #f7c509;
+}
+
+h2 {
+  display: block;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+a {
+  color: #235597;
+  text-decoration: none;
+}
+
+div {
+  display: block;
+}
+.color-picker {
+  margin-top: 10px;
+}
+
+/* CARD */
+
+.pokemon-detail {
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+
+.images {
+  margin-bottom: 6px;
+}
+
+.pokemon .images img {
+  background: #eaeaea;
+  border-radius: 15px;
+  margin-right: 10px;
+  height: 96px;
+  width: 96px;
+}
+
+.pokemon ul.types {
+  margin: 0;
+  padding: 0;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
