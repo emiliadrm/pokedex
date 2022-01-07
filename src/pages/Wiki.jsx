@@ -1,12 +1,12 @@
 import React from "react";
-import Header from "./components/Header";
-import PokemonList from "./components/PokemonList";
+import Header from "../components/Header";
+import PokeNav from "./PokeNav";
 
 export default function Wiki() {
   return (
-    <div className="wiki-container">
+    <div className="container-wiki">
       <Header />
-      <PokemonList />
+      <PokeNav />
     </div>
   );
 }

@@ -1,37 +1,52 @@
 import React, { useContext } from "react";
 import { AppContext } from "../context/AppProvider";
-import getPokemonType from "../fetchHook";
-import pokeFire from "../resource/poke_red.svg";
-import pokeWater from "../resource/poke_blue.svg";
-import pokeElectric from "../resource/poke_yellow.svg";
-import pokeGrass from "../resource/poke_green.svg";
+import getPokemonType from "../dataFetch/fetchHook";
+import pokeFire from "../resource/poke-red.svg";
+import pokeWater from "../resource/poke-blue.svg";
+import pokeElectric from "../resource/poke-yellow.svg";
+import pokeGrass from "../resource/poke-green.svg";
 
 export default function Header() {
   const context = useContext(AppContext);
 
-  const handlerSearch = async () => {
-    const result = await getPokemonType(context.pickType);
-    console.log(result);
-    return context.setShowType(result);
-  };
+  const selectType = async (tipo) => {
+    // context.setpickType(tipo, true);
+    const resultado = await getPokemonType(tipo);
+    console.log('Resultados', resultado);
+    context.setShowType(resultado);
+  }
 
   return (
     <>
-      <select
-        onChange={(e) => {
-          context.setpickType(e.target.value, true);
-        }}
-        name="pokemons"
-        id="pokemons"
-        value={context.pickType}
-      >
-        <option>Elige un tipo</option>
-        <option value="fire">Fuego</option>
-        <option value="electric">Electrico</option>
-        <option value="water">Agua</option>
-        <option value="flying">Voladores</option>
-      </select>
-      <button onClick={handlerSearch}>Buscar</button>
+      <div className="">
+        <h1>POKEDEX</h1>
+        <label>
+          <button
+            type="button"
+            onClick={() => selectType('fire')}
+          >
+            <img src={pokeFire} alt="" />
+          </button>
+          <button
+            type="button"
+            onClick={() => selectType('electric')}
+          >
+            <img src={pokeElectric} alt="" />
+          </button>
+          <button
+            type="button"
+            onClick={() => selectType('water')}
+          >
+            <img src={pokeWater} alt="" />
+          </button>
+          <button
+            type="button"
+            onClick={() => selectType('grass')}
+          >
+            <img src={pokeGrass} alt="" />
+          </button>
+        </label>
+      </div>
     </>
   );
 }

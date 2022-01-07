@@ -13,10 +13,18 @@ body {
   display: block;
 }
 
+
+button {
+  background: none;
+  border-style: none;
+  border-color: none;
+  color: none;
+  cursor: pointer;
+}
+
 header {
   height: 170px;
   flex: 0 0 auto;
-  background: url(https://vignette.wikia.nocookie.net/pokemonzetaomicron/images/8/8f/Onega_Town.png/revision/latest?cb=20140423131057);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -24,6 +32,7 @@ header {
   box-shadow: -3px 0 0 #235597, 3px 0 0 #235597, 0 -3px 0 #235597,
     0 3px 0 #235597;
 }
+
 link {
   text-decoration: none;
 }
@@ -31,6 +40,9 @@ link {
 li {
   list-style: none;
 }
+
+
+ /* ESTILOS QUE AUN NO ENTIENDO */
 .pokemon-picker {
   display: flex;
 }
@@ -39,12 +51,6 @@ li {
   background: red;
 }
 
-.container {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 /* Header */
 .color-picker {
   margin-top: 10px;
@@ -61,24 +67,17 @@ li {
 }
 /* bolitas del heather */
 .PokeBall {
-  display: -webkit-flex;
   display: flex;
-  -webkit-align-items: center;
   align-items: center;
 }
 .PokeBall {
   display: flex;
   align-items: center;
 }
-
 .red {
   width: 30px;
 }
 
-.App {
-  font-family: "Roboto";
-  text-align: center;
-}
 h1 {
   color: #f7c509;
   font-family: Fjalla One;
@@ -107,9 +106,6 @@ a {
   text-decoration: none;
 }
 
-div {
-  display: block;
-}
 .color-picker {
   margin-top: 10px;
 }
@@ -141,4 +137,62 @@ div {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+
+/* ESTILOS GENERALES */
+
+.App {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(170 255 208);
+  background: #c0fff7;
+  overflow: hidden;
+  font-family: "Roboto";
+  text-align: center;
+}
+
+.container-app {
+  background: #fff;
+  background: url(../resource/Onega_Town.png);
+  box-shadow: -3px 0 0 #235597, 3px 0 0 #235597, 0 -3px 0 #235597, 0 3px 0 #235597;
+  font-family: Roboto Mono,monospace;
+  width: 500px;
+  min-height: 550px;
+  max-height: 550px;
+  display: flex;
+  justify-content: center;
+}
+
+.container-inicio {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-wiki {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+
+/* COMPONENTE LISTA DE LOS POKEMONES */
+
+.poke-list-style {
+  color: #eaeaea;
+}
+
+.poke-nav-style {
+  max-height: 250px;
+  overflow:scroll;
+  display: block;
+}
+
+.poke-nav-list {
+  display: block;
 }
